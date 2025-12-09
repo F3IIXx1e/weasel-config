@@ -1,0 +1,105 @@
+# Windows11 主题配色
+style/+:
+  # 行内预览模式
+  inline_preedit: true
+
+  layout/+:
+    # 布局设置
+    type: horizontal
+    # 边框宽度
+    border_width: 1.5
+    # 候选窗口圆角半径
+    corner_radius: 12
+    # 主体元素和候选框的左右边距；为负值时，不显示候选框
+    margin_x: 14
+    # 主体元素的上下边距；为负值时，不显示候选框
+    margin_y: 10
+    # 候选项和相应标签的间距
+    hilite_spacing: 4
+    # 高亮区域和内部文字的水平间距
+    hilite_padding_x: 8
+    # 高亮区域和内部文字的垂直间距
+    hilite_padding_y: 4
+    # 候选背景色块圆角半径
+    hilited_corner_radius: 8
+    # 阴影区域半径
+    shadow_radius: 8
+    # 阴影左右偏移距离
+    shadow_offset_x: 3
+    # 阴影上下偏移距离
+    shadow_offset_y: 3
+
+preset_color_schemes/+:
+  windows11_light:
+    name: "Windows 11 浅色 / Windows 11 light"
+    author: "F3IIXx1e"
+    color_format: rgba
+    # 预编辑区 (当开启 inline_preedit: true 时, 以下代码不生效)
+    # 1. 基本文本
+    text_color: 0x191919
+    back_color: 0xF9F9F9
+    border_color: 0xBCBCBC
+    # 2. 高亮候选词
+    hilited_text_color: 0x191919
+    hilited_back_color: 0xF0F0F0
+    # 3. 翻页器 (实测翻页器颜色有 bug, 若设置 浅色全黑/深色全白 效果最好)
+    prevpage_color: 0x000000
+    nextpage_color: 0x000000
+    # 候选列表区
+    # 1. 高亮候选词
+    hilited_mark_color: 0x0F78E4
+    hilited_label_color: 0x191919
+    hilited_comment_text_color: 0x444444
+    hilited_candidate_text_color: 0x191919
+    hilited_candidate_back_color: 0xF0F0F0
+    hilited_candidate_border_color: 0xF0F0F0
+    # 2. 非高亮候选词
+    label_color: 0x7F7F7F
+    comment_text_color: 0x6F6F6F
+    candidate_text_color: 0x444444
+    candidate_back_color: 0xF9F9F9
+    candidate_border_color: 0xF9F9F9
+    # 阴影区
+    # 1. 输入框卡片阴影
+    shadow_color: 0x33333333
+    # 2. 预览区高亮候选词阴影
+    hilited_shadow_color: 0x00000000
+    # 3. 候选区高亮候选词阴影
+    hilited_candidate_shadow_color: 0x00000000
+
+  windows11_dark:
+    name: "Windows 11 深色 / Windows 11 dark"
+    author: "F3IIXx1e"
+    color_format: rgba
+    # 预编辑区 (当开启 inline_preedit: true 时, 以下代码不生效)
+    # 1. 基本文本
+    text_color: 0xF0F0F0
+    back_color: 0x2B2B2B
+    border_color: 0x3C3C3C
+    # 2. 高亮候选词
+    hilited_text_color: 0xF0F0F0
+    hilited_back_color: 0x3C3C3C
+    # 3. 翻页器 (实测翻页器颜色有 bug, 若设置 浅色全黑/深色全白 效果最好)
+    prevpage_color: 0xFFFFFF
+    nextpage_color: 0xFFFFFF
+    # 候选列表区
+    # 1. 高亮候选词
+    hilited_mark_color: 0x5BB8ED
+    hilited_label_color: 0xF0F0F0
+    hilited_comment_text_color: 0xC0C0C0
+    hilited_candidate_text_color: 0xF0F0F0
+    hilited_candidate_back_color: 0x3C3C3C
+    hilited_candidate_border_color: 0x3C3C3C
+    # 2. 非高亮候选词
+    label_color: 0xAAAAAA
+    comment_text_color: 0x7F7F7F
+    candidate_text_color: 0xDDDDDD
+    candidate_back_color: 0x2B2B2B
+    candidate_border_color: 0x2B2B2B
+    # 阴影区
+    # 1. 输入框卡片阴影
+    shadow_color: 0x00000033
+    # 2. 预览区高亮候选词阴影
+    hilited_shadow_color: 0x00000000
+    # 3. 候选区高亮候选词阴影
+    hilited_candidate_shadow_color: 0x00000000
