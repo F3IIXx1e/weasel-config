@@ -1,0 +1,30 @@
+patch:
+  # 覆盖原本的方案列表, 只使用 rime_ice 的方案
+  schema_list:
+    - { schema: rime_ice }
+  # 设置每页候选词数量为 10
+  menu/page_size: 10
+  # 方案选单快捷键 Ctrl + `
+  switcher/hotkeys:
+    - Control+grave
+  # 覆盖快捷键绑定, 重新绑定按键
+  key_binder:
+    # Lua 配置: 以词定字（上屏当前词句的第一个或最后一个字）
+    # 第一个/最后一个字 - / =
+    select_first_character: 'minus'
+    select_last_character: 'equal'
+    bindings:
+      # 使用翻页 , .
+      - { when: has_menu, accept: comma, send: Page_Up }
+      - { when: has_menu, accept: period, send: Page_Down }
+      # 控制焦点移动 , .
+      - { when: composing, accept: Shift+Tab, send: Up }
+      - { when: composing, accept: Tab, send: Down }
+      # 切换光标至下/上一个拼音 [ / ]
+      - { when: composing, accept: bracketleft, send: Shift+Left }
+      - { when: composing, accept: bracketright, send: Shift+Right }
+      # 切换中英标点 Ctrl + .
+      - { when: always, toggle: ascii_punct, accept: Control+period }
+      # 切换简繁 Ctrl + 4 / $
+      - { when: always, toggle: traditionalization, accept: Control+4 }
+      - { when: always, toggle: traditionalization, accept: Control+dollar }

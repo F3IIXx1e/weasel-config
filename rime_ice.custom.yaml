@@ -1,0 +1,37 @@
+# rime_ice.custom.yaml
+# '#' 开头的行为注释行
+# patch: 下的内容定义了要修改的配置项及其新值
+# 注意缩进：patch: 顶格，其下的配置项需缩进（通常为 2 个空格）
+
+patch:
+  # 设置雾凇拼音的默认状态
+  # @0: ascii_mode, 中英文设置 0 中文 1 英文
+  "switches/@0/reset": 1
+  # @1: ascii_punct, 中英标点设置 0 中文标点 1 英文标点
+  "switches/@1/reset": 1
+  # @2: traditionalization, 简繁体设置 0 简体 1 繁体
+  "switches/@2/reset": 0
+  # @3: emoji, emoji设置 0 关闭 1 开启
+  "switches/@3/reset": 1
+  # @4: full_shape, 半全角设置 0 半角 1 全角
+  "switches/@4/reset": 0
+  # @5: search_single_char, 辅码查词设置 0 词组 1 单字
+  "switches/@5/reset": 0
+  # 开启万象大语言模型
+  "grammar/language": wanxiang-lts-zh-hans
+  # 命中的最长词组
+  "grammar/collocation_max_length": 8
+  # 命中的最短词组，搭配词频健全的词库时候应当最小值设为3避开2字高频词
+  "grammar/collocation_min_length": 3
+  # 默认-12 对常见搭配词组施加的惩罚值。较高的负值会降低这些搭配被选中的概率，防止过于频繁地出现某些固定搭配。
+  "grammar/collocation_penalty": -10
+  # 默认-12 对非搭配词组施加的惩罚值。较高的负值会降低非搭配词组被选中的概率，避免不合逻辑或不常见的词组组合。
+  "grammar/non_collocation_penalty": -17
+  # 默认-24 对弱搭配词组施加的惩罚值。保持默认值通常是为了有效过滤掉不太常见但仍然合理的词组组合。
+  "grammar/weak_collocation_penalty": -24
+  # 默认-18 对词组中后续词语的位置施加的惩罚值。较高的负值会降低某些词语在句子后部出现的概率，防止句子结构不自然。
+  "grammar/rear_penalty": -18
+  # translator 内加载
+  translator/contextual_suggestions: true
+  translator/max_homophones: 7
+  translator/max_homographs: 7

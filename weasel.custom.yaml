@@ -1,0 +1,26 @@
+patch:
+  # 在终端中默认使用英文模式
+  "app_options/windowsterminal.exe/ascii_mode": true
+  "app_options/wt.exe/ascii_mode": true
+  "app_options/cmd.exe/ascii_mode": true
+  "app_options/pwsh.exe/ascii_mode": true
+  "app_options/powershell.exe/ascii_mode": true
+  # 颜色风格方案
+  "style/color_scheme": lost_temple
+  # 深色模式下颜色风格方案
+  "style/color_scheme_dark": dark_temple
+  # 全局字体大小
+  "style/font_point": 14
+  "style/label_font_point": 10
+  "style/comment_font_point": 12
+  # 全局字体样式
+  "style/font_face": 'Maple Mono NF CN'
+  # 标签字符
+  "style/label_format": '%s.'
+  # 解决字体跳动问题
+  "style/layout/baseline": 100
+  "style/layout/linespacing": 120
+  # 标签、候选文字、注解文字之间的相对对齐方式
+  "style/layout/align_type": bottom
+  # 候选项的间距
+  "style/layout/candidate_spacing": 4
