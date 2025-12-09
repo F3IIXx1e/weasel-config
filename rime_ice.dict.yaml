@@ -15,6 +15,21 @@ import_tables:
   # 建议把扩展词库放到下面，有重复词条时，最上面的权重生效
   # - mydict1           # 挂载配置目录下的 mydict1.dict.yaml 词库文件
   # - cn_dicts/mydict2  # 挂载 cn_dicts 目录里的 mydict2.dict.yaml 词库文件
+
+  # 万象词库
+  - dicts/wanxiang_cn/cuoyin
+  - dicts/wanxiang_cn/dikuang
+  - dicts/wanxiang_cn/diming
+  - dicts/wanxiang_cn/duoyin
+  - dicts/wanxiang_cn/jichu
+  - dicts/wanxiang_cn/lianxiang
+  - dicts/wanxiang_cn/renming
+  - dicts/wanxiang_cn/shengwu
+  - dicts/wanxiang_cn/shici
+  - dicts/wanxiang_cn/shuxue
+  - dicts/wanxiang_cn/wu-hua-sheng-yi-yao
+  - dicts/wanxiang_cn/wuzhong
+  - dicts/wanxiang_cn/zi
 ...
 
 # 按需启用：
